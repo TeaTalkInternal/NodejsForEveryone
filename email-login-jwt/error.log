@@ -1,0 +1,44 @@
+{
+  level: 'warn',
+  message: 'Run "npm install apidoc -g" and then run "apidoc -e node_modules/" at your terminal',
+  log: [Error: ENOENT: no such file or directory, access './doc/api_data.json'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'access',
+    path: './doc/api_data.json'
+  },
+  timestamp: '2020-10-21T11:32:31.535Z'
+}
+{
+  level: 'warn',
+  message: 'Run "npm install apidoc -g" and then run "apidoc -e node_modules/" at your terminal',
+  log: [Error: ENOENT: no such file or directory, access './doc/api_data.json'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'access',
+    path: './doc/api_data.json'
+  },
+  timestamp: '2020-10-21T11:34:30.584Z'
+}
+{
+  level: 'warn',
+  message: 'Run "npm install apidoc -g" and then run "apidoc -e node_modules/" at your terminal',
+  log: [Error: ENOENT: no such file or directory, access './doc/api_data.json'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'access',
+    path: './doc/api_data.json'
+  },
+  timestamp: '2020-10-21T11:35:27.250Z'
+}
+{
+  level: 'warn',
+  message: 'Run "npm install apidoc -g" and then run "apidoc -e node_modules/" at your terminal',
+  log: [Error: ENOENT: no such file or directory, access './doc/api_data.json'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'access',
+    path: './doc/api_data.json'
+  },
+  timestamp: '2020-10-21T11:35:40.921Z'
+}
