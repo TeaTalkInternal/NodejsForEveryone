@@ -1,3 +1,6 @@
 email-login-jwt/node_modules
 email-login-jwt/.env
 nodemon.json
+
+user-auth-password-login/node_modules
+user-auth-password-login/.env
