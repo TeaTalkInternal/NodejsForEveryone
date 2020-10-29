@@ -32,7 +32,7 @@ Router.post('/sign-in', async (req, res, next) => {
         const fetchedPassword = rows[0].password;
         console.log('fetchedPassword'+rows[0].email);
         console.log('fetchedPassword'+rows[0].password);
-        const isMatched = bcrypt.compareSync(fetchedPassword, password);
+        const isMatched = await bcrypt.compare(password,fetchedPassword);
 
         // if(await bcrypt.compare(password, fetchedPassword)) {
         //     console.log("MATECHDD");
@@ -123,6 +123,8 @@ Router.post('/sign-up', async (req, res, next) => {
         //const salt = await bcrypt.genSalt();
         const numberOfRounds = 10
         const hashedPassword = await bcrypt.hash(password, numberOfRounds);
+
+        console.log('hashed' + hashedPassword);
 
         const insertIntoSql = "INSERT INTO `customers` (`customer_id`,`email`,`password`) VALUES ('" + custId + "','" + email + "','" + hashedPassword + "');";
         const [insertValueRows, insertValuefieldData] = await dbpool.query(insertIntoSql);
