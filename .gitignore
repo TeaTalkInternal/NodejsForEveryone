@@ -4,3 +4,6 @@ nodemon.json
 
 user-auth-password-login/node_modules
 user-auth-password-login/.env
+
+user-login/node_modules
+user-login/.env
