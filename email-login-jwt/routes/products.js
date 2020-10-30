@@ -15,11 +15,11 @@ const Router = express.Router();
 function checkForAcessTokenValidity(req, res, next) {
     const bearerToken = req.headers['authorization'];
     if(!bearerToken) {
-        return res.status(401).json({ 'message': "Access Token invalid"});
+        return res.status(403).json({ 'message': "Access Token invalid"});
     }
     const accessToken = bearerToken.split(" ")[1];
     if(!accessToken) {
-        return res.status(401).json({ 'message': "Access Token invalid" });
+        return res.status(403).json({ 'message': "Access Token invalid" });
     }
     const accessStr = process.env.ACCESS_TOKEN_SECRET;
     jwt.verify(accessToken, accessStr, (err, body) => {
@@ -28,7 +28,7 @@ function checkForAcessTokenValidity(req, res, next) {
             next();
         }
         else {
-            return res.status(401).json({ 'message': "User is not Authenticated." });
+            return res.status(403).json({ 'message': "User is not Authenticated." });
         }
     });
 }
